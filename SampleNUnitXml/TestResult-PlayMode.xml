@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="2" result="Failed(Child)" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2022-07-23 07:06:39Z" end-time="2022-07-23 07:06:39Z" duration="0.0912097">
+  <test-suite type="TestSuite" id="1000" name="Unity-PublishUnitTestReport-Example" fullname="Unity-PublishUnitTestReport-Example" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2022-07-23 07:06:39Z" end-time="2022-07-23 07:06:39Z" duration="0.091210" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1004" name="Tests.SceneLoading.dll" fullname="/github/workspace/Library/ScriptAssemblies/Tests.SceneLoading.dll" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2022-07-23 07:06:39Z" end-time="2022-07-23 07:06:39Z" duration="0.081807" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="93" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1005" name="Tests" fullname="Tests" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2022-07-23 07:06:39Z" end-time="2022-07-23 07:06:39Z" duration="0.081003" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1006" name="SceneLoading" fullname="Tests.SceneLoading" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2022-07-23 07:06:39Z" end-time="2022-07-23 07:06:39Z" duration="0.080581" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1001" name="TestSceneLoading" fullname="Tests.SceneLoading.TestSceneLoading" classname="Tests.SceneLoading.TestSceneLoading" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2022-07-23 07:06:39Z" end-time="2022-07-23 07:06:39Z" duration="0.078972" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1003" name="LoadScene_Passed_EmptyCanBeLoaded" fullname="Tests.SceneLoading.TestSceneLoading.LoadScene_Passed_EmptyCanBeLoaded" methodname="LoadScene_Passed_EmptyCanBeLoaded" classname="Tests.SceneLoading.TestSceneLoading" runstate="Runnable" seed="123233946" result="Failed" start-time="2022-07-23 07:06:39Z" end-time="2022-07-23 07:06:39Z" duration="0.024996" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+              </properties>
+              <failure>
+                <message><![CDATA[Unhandled log message: '[Error] Scene 'Empty' couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...'. Use UnityEngine.TestTools.LogAssert.Expect]]></message>
+                <stack-trace><![CDATA[UnityEngine.SceneManagement.SceneManager:LoadSceneAsync (string,UnityEngine.SceneManagement.LoadSceneMode)
+Tests.SceneLoading.TestSceneLoading/<LoadScene_Passed_EmptyCanBeLoaded>d__1:MoveNext () (at Assets/Tests/Tests.SceneLoading/TestSceneLoading.cs:27)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Scene 'Empty' couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
+To add a scene to the build settings use the menu File->Build Settings...
+]]></output>
+            </test-case>
+            <test-case id="1002" name="LoadScene_Passed_SampleSceneCanBeLoaded" fullname="Tests.SceneLoading.TestSceneLoading.LoadScene_Passed_SampleSceneCanBeLoaded" methodname="LoadScene_Passed_SampleSceneCanBeLoaded" classname="Tests.SceneLoading.TestSceneLoading" runstate="Runnable" seed="457512920" result="Passed" start-time="2022-07-23 07:06:39Z" end-time="2022-07-23 07:06:39Z" duration="0.033901" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+              </properties>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
