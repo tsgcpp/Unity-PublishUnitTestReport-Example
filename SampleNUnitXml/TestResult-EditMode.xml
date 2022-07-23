@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Failed(Child)" total="6" passed="4" failed="1" inconclusive="0" skipped="1" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.1125471">
+  <test-suite type="TestSuite" id="1014" name="Unity-PublishUnitTestReport-Example" fullname="Unity-PublishUnitTestReport-Example" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.112547" total="6" passed="4" failed="1" inconclusive="0" skipped="1" asserts="0">
+    <properties />
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1022" name="Tests.Validator.dll" fullname="/github/workspace/Library/ScriptAssemblies/Tests.Validator.dll" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.066785" total="6" passed="4" failed="1" inconclusive="0" skipped="1" asserts="0">
+      <properties>
+        <property name="_PID" value="599" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1023" name="Tests" fullname="Tests" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.066006" total="6" passed="4" failed="1" inconclusive="0" skipped="1" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1024" name="EditMode" fullname="Tests.EditMode" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.062498" total="6" passed="4" failed="1" inconclusive="0" skipped="1" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1015" name="TestGreaterValidator" fullname="Tests.EditMode.TestGreaterValidator" classname="Tests.EditMode.TestGreaterValidator" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.050713" total="6" passed="4" failed="1" inconclusive="0" skipped="1" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1016" name="ctor_Passed_CanUseZeroAsBorder" fullname="Tests.EditMode.TestGreaterValidator.ctor_Passed_CanUseZeroAsBorder" methodname="ctor_Passed_CanUseZeroAsBorder" classname="Tests.EditMode.TestGreaterValidator" runstate="Runnable" seed="1409180009" result="Passed" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.021102" asserts="0">
+              <properties />
+            </test-case>
+            <test-case id="1018" name="ctor_Passed_CanUseZeroAsNegativeInfinity" fullname="Tests.EditMode.TestGreaterValidator.ctor_Passed_CanUseZeroAsNegativeInfinity" methodname="ctor_Passed_CanUseZeroAsNegativeInfinity" classname="Tests.EditMode.TestGreaterValidator" runstate="Ignored" seed="981022204" result="Skipped" label="Ignored" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.000248" asserts="0">
+              <properties>
+                <property name="_SKIPREASON" value="To Be Confirmed" />
+              </properties>
+              <reason>
+                <message><![CDATA[To Be Confirmed]]></message>
+              </reason>
+            </test-case>
+            <test-case id="1017" name="ctor_Passed_CanUseZeroAsPositiveInfinity" fullname="Tests.EditMode.TestGreaterValidator.ctor_Passed_CanUseZeroAsPositiveInfinity" methodname="ctor_Passed_CanUseZeroAsPositiveInfinity" classname="Tests.EditMode.TestGreaterValidator" runstate="Runnable" seed="1298721801" result="Failed" label="Error" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.005797" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[System.ArgumentException : "border" must not be infinity]]></message>
+                <stack-trace><![CDATA[  at Validator.GreaterValidator..ctor (System.Single border) [0x00013] in /github/workspace/Assets/Runtime/Validator/GreaterValidator.cs:11 
+  at Tests.EditMode.TestGreaterValidator.ctor_Passed_CanUseZeroAsPositiveInfinity () [0x00001] in /github/workspace/Assets/Tests/Tests.Validator/TestGreaterValidator.cs:24 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <2c464dcd3e6d4f6784d86bd1010f8293>:0 ]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1021" name="Validate_ReturnsFalse_IfValueIsLessThanBorder" fullname="Tests.EditMode.TestGreaterValidator.Validate_ReturnsFalse_IfValueIsLessThanBorder" methodname="Validate_ReturnsFalse_IfValueIsLessThanBorder" classname="Tests.EditMode.TestGreaterValidator" runstate="Runnable" seed="1753850479" result="Passed" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.000740" asserts="0">
+              <properties />
+            </test-case>
+            <test-case id="1020" name="Validate_ReturnsFalse_IfValueIsSameAsBorder" fullname="Tests.EditMode.TestGreaterValidator.Validate_ReturnsFalse_IfValueIsSameAsBorder" methodname="Validate_ReturnsFalse_IfValueIsSameAsBorder" classname="Tests.EditMode.TestGreaterValidator" runstate="Runnable" seed="1652637935" result="Passed" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.000293" asserts="0">
+              <properties />
+            </test-case>
+            <test-case id="1019" name="Validate_ReturnsTrue_IfValueIsGreaterThanBorder" fullname="Tests.EditMode.TestGreaterValidator.Validate_ReturnsTrue_IfValueIsGreaterThanBorder" methodname="Validate_ReturnsTrue_IfValueIsGreaterThanBorder" classname="Tests.EditMode.TestGreaterValidator" runstate="Runnable" seed="269363089" result="Passed" start-time="2022-07-23 07:06:46Z" end-time="2022-07-23 07:06:46Z" duration="0.000429" asserts="0">
+              <properties />
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
