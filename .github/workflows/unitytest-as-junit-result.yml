@@ -1,0 +1,40 @@
+name: Unity Test with JUnit Publish Action
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      # *Set your workflows here*
+      - name: Build and Test
+        run: |
+          echo "# Build and Test Mock"
+          mkdir "./TestResults"
+          cp ./SampleNUnitXml/TestResult-*.xml ./TestResults
+          exit 1  # as failure
+
+      # *Upload your test result xml files*
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: TestResults-Example
+          path: ./TestResults/*.xml
+
+  call-publish_test_result:
+    name: Publish Test Result
+    needs: build
+    if: always()
+    uses: tsgcpp/Unity-PublishUnitTestReport-Example/.github/workflows/publish_test_result.yml@main
+    with:
+      artifactName: TestResults-Example
