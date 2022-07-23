@@ -1,0 +1,45 @@
+name: Publish Test Result with Publish Test Results
+
+on:
+  workflow_call:
+    inputs:
+      artifactName:
+        required: true
+        type: string
+
+jobs:
+  publish-test-result:
+    name: Result (${{ inputs.artifactName }})
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Test Result Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ inputs.artifactName }}
+          path: ./${{ inputs.artifactName }}
+
+      - name: NUnit3 to JUnit
+        shell: bash
+        run: |
+          set -eux
+
+          RESULT_DIRECTORY="./TestResultsJUnit"
+          mkdir -p "${RESULT_DIRECTORY}"
+
+          sudo apt-get -y install xsltproc
+
+          # https://github.com/nunit/nunit-transforms/blob/master/nunit3-junit/LICENSE.txt
+          XSLT="./nunit3-junit.xslt"
+          curl -s https://raw.githubusercontent.com/nunit/nunit-transforms/master/nunit3-junit/nunit3-junit.xslt > "${XSLT}"
+
+          find "./${{ inputs.artifactName }}" -name "*.xml" | while read -r XML
+          do
+            JUNIT_XML="${RESULT_DIRECTORY}/$(basename ${XML})"
+            xsltproc -o "${JUNIT_XML}" "${XSLT}" "${XML}"
+          done
+      
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          files: ./TestResultsJUnit/*.xml
